@@ -27,9 +27,13 @@ Use
 Optional parameters
 
 dotnet xxx.dll  Start             start the service
+
 dotnet xxx.dll  Stop              stop the service
+
 dotnet xxx.dll  Reset             reset the service
+
 dotnet xxx.dll  Install           install the service
+
 dotnet xxx.dll  UnInstall         uninstall the service
 
 No parameters
