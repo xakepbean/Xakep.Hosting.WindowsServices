@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26823.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Xakep.Hosting.WindowsServices", "src\Xakep.Hosting.WindowsServices.csproj", "{2966E577-A9F0-432E-9163-43513AE7BEEA}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "sample", "sample\sample.csproj", "{5F9978CC-EE5D-4625-A0DA-0309BA939B44}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2966E577-A9F0-432E-9163-43513AE7BEEA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2966E577-A9F0-432E-9163-43513AE7BEEA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2966E577-A9F0-432E-9163-43513AE7BEEA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2966E577-A9F0-432E-9163-43513AE7BEEA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5F9978CC-EE5D-4625-A0DA-0309BA939B44}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5F9978CC-EE5D-4625-A0DA-0309BA939B44}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5F9978CC-EE5D-4625-A0DA-0309BA939B44}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5F9978CC-EE5D-4625-A0DA-0309BA939B44}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F8F9BBF0-B0A9-4082-9318-F5FABEE67020}
+	EndGlobalSection
+EndGlobal
