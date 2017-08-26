@@ -2,25 +2,21 @@ Use
 
 ```cs
 
-    public class Program
-    {
         public static void Main(string[] args)
         {
-            BuildWebHost().RunAsService(args, Service =>
-             {
-                 Service.ServiceName = "netcorehostservice";
-                 Service.DisplayName = "sample netcore host service";
-                 Service.Description = " sample netcore host service Description";
-                 Service.StartType = StartType.Auto;
-                 Service.Account = AccountType.LocalSystem;
-             });
+            ServiceUtils.Run(args, (arg) => BuildWebHost(arg).Run(), Service =>
+               {
+                   Service.ServiceName = "netcorehostservice";
+                   Service.DisplayName = "sample netcore host service";
+                   Service.Description = "sample netcore host service Description";
+                   Service.StartType = StartType.Auto;
+                   Service.Account = AccountType.LocalSystem;
+               });
         }
-        public static IWebHost BuildWebHost() =>
-           WebHost.CreateDefaultBuilder()
+        public static IWebHost BuildWebHost(string[] args) =>
+           WebHost.CreateDefaultBuilder(args)
                .UseStartup<Startup>()
                .Build();
-
-    }
 
 ```
 
