@@ -1,7 +1,4 @@
 ﻿using DasMulli.Win32.ServiceUtils;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Xakep.Hosting.WindowsServices
 {
@@ -18,6 +15,8 @@ namespace Xakep.Hosting.WindowsServices
         public StartType StartType { get; set; }
 
         public bool WriteLog { get; set; }
+
+        internal string[] Args { get; set; }
 
         internal string LogPath { get; set; }
 

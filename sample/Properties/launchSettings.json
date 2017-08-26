@@ -3,7 +3,7 @@
     "windowsAuthentication": false,
     "anonymousAuthentication": true,
     "iisExpress": {
-      "applicationUrl": "http://localhost:52421/",
+      "applicationUrl": "http://localhost:50850/",
       "sslPort": 0
     }
   },
@@ -17,12 +17,11 @@
     },
     "sample": {
       "commandName": "Project",
-      "commandLineArgs": "uninstalL",
       "launchBrowser": true,
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       },
-      "applicationUrl": "http://localhost:52422/"
+      "applicationUrl": "http://localhost:50851/"
     }
   }
 }

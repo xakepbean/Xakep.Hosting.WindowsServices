@@ -33,7 +33,7 @@ namespace DasMulli.Win32.ServiceUtils
         {
             if (command == ServiceControlCommand.Stop)
             {
-                statusReportCallback(ServiceState.StopPending, ServiceAcceptedControlCommandsFlags.None, win32ExitCode: 0, waitHint: 3000);
+                statusReportCallback(ServiceState.StopPending, ServiceAcceptedControlCommandsFlags.None, win32ExitCode: 0, waitHint: 10000);
 
                 var win32ExitCode = 0;
 
