@@ -199,7 +199,6 @@ namespace Xakep.Hosting.WindowsServices
             Settings.Description = ".net core services";
             Settings.WriteLog = true;
             Settings.Args = args;
-            Settings.LogPath = Path.Combine(PlatformServices.Default.Application.ApplicationBasePath, "Servicelog.txt");
             if (SetService != null)
                 SetService(Settings);
 

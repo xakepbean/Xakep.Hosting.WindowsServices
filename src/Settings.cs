@@ -1,4 +1,7 @@
 ﻿using DasMulli.Win32.ServiceUtils;
+using Microsoft.Extensions.PlatformAbstractions;
+using System;
+using System.IO;
 
 namespace Xakep.Hosting.WindowsServices
 {
@@ -18,7 +21,27 @@ namespace Xakep.Hosting.WindowsServices
 
         internal string[] Args { get; set; }
 
-        internal string LogPath { get; set; }
+        private string _LogsPath = string.Empty;
+        private string LogsPath
+        {
+            get
+            {
+                if (string.IsNullOrWhiteSpace(_LogsPath))
+                {
+                    var logpath = Path.Combine(PlatformServices.Default.Application.ApplicationBasePath, "logs");
+                    if (!Directory.Exists(logpath))
+                        Directory.CreateDirectory(logpath);
+                    _LogsPath = logpath;
+                }
+                return _LogsPath;
+            }
+        }
+
+        internal string LogPath {
+            get {
+                return Path.Combine(LogsPath, $"host_{DateTime.Now.ToString("yyyyMMdd")}.log");
+            }
+        }
 
         internal IWin32Service Service { get; set; }
     }
