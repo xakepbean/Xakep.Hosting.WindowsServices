@@ -120,8 +120,14 @@ namespace Xakep.Hosting.WindowsServices
             {
                 if (logs.Count > 500 || Push)
                 {
-                    File.AppendAllText(Service.LogPath, string.Join(Environment.NewLine, logs));
-                    logs.Clear();
+                    try
+                    {
+                        File.AppendAllText(Service.LogPath, string.Join(Environment.NewLine, logs));
+                    }
+                    finally
+                    {
+                        logs.Clear();
+                    }
                 }
             }
         }
